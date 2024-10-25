@@ -1,9 +1,9 @@
-\# Auto-review-tool
+# Auto-review-tool
 
 
 This project is a web application built with **FastAPI** that interacts with the GitHub and Mistral AI APIs to analyze project code and provide feedback.
 
-\## Description
+## Description
 
 The application allows you to:
 
@@ -11,100 +11,100 @@ The application allows you to:
 - Send the code along with the assignment description and candidate level to Mistral AI for analysis.
 - Receive and display feedback on the candidate's project.
 
-\## Requirements
+## Requirements
 
 - **Python 3.7** or higher
 - [**Poetry**](https://python-poetry.org/docs/#installation) installed
 - Mistral AI account and API key
 
-\## Installation
+## Installation
 
 1. **Clone the repository:**
 
-   \```bash
+   ```bash
    git clone https://github.com/your_username/your_repository.git
    cd your_repository
-   \```
+   ```
 
 2. **Install dependencies using Poetry:**
 
-   \```bash
+   ```bash
    poetry install
-   \```
+   ```
 
 3. **Create a `.env` file in the root directory and add your Mistral AI API key:**
 
-   \```env
+   ```env
    MISTRAL_API_KEY=your_api_key
-   \```
+   ```
 
-\## Running the Application
+## Running the Application
 
 1. **Activate the Poetry virtual environment:**
 
-   \```bash
+   ```bash
    poetry shell
-   \```
+   ```
 
 2. **Run the application using Uvicorn:**
 
-   \```bash
+   ```bash
    uvicorn app:app --reload
-   \```
+   ```
 
    The application will be accessible at `http://127.0.0.1:8000`.
 
-\## Usage
+## Usage
 
 Send a POST request to the `/review` endpoint with JSON data in the following format:
 
-\```json
+```json
 {
   "assignment_description": "Description of the assignment",
   "github_url_repo": "https://github.com/username/repository",
   "candidate_level": "Junior"  // Possible values: "Junior", "Middle", "Senior"
 }
-\```
+```
 
-\### Example request using `curl`:
+### Example request using `curl`:
 
-\```bash
-curl -X POST "http://127.0.0.1:8000/review" \
-  -H "Content-Type: application/json" \
+```bash
+curl -X POST "http://127.0.0.1:8000/review" 
+  -H "Content-Type: application/json" 
   -d '{
     "assignment_description": "Create a simple web application",
     "github_url_repo": "https://github.com/username/repository",
     "candidate_level": "Middle"
   }'
-\```
+```
 
-\## Running Tests
+## Running Tests
 
 To run the tests, execute:
 
-\```bash
+```bash
 pytest tests.py
-\```
+```
 
 Ensure you are in the Poetry virtual environment.
 
-\## Project Structure
+## Project Structure
 
-\```
+```
 ├── app.py          # Main application file
 ├── tests.py        # Test file
 ├── pyproject.toml  # Poetry configuration file
 ├── README.md       # This file
 └── .env            # Environment variables file (needs to be created)
-\```
+```
 
-\## Notes
+## Notes
 
 - The **`.env` file** is not included in the repository and must be created manually. Do not add it to version control.
 - The **`MISTRAL_API_KEY` environment variable** is required for the application to work.
 - **Supported candidate levels**: "Junior", "Middle", "Senior".
 
-What if:
+#What if:
 
 1. Implement Caching Mechanisms:
 Cache GitHub Repository Data:
