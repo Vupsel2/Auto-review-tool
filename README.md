@@ -106,7 +106,7 @@ Ensure you are in the Poetry virtual environment.
 
 #What if:
 
-1.- Implement Caching Mechanisms:
+1. Implement Caching Mechanisms:
 Cache GitHub Repository Data:
 Cache the file tree and metadata of repositories to avoid repeated API calls for the same data. Since repositories don't change frequently within short time spans, you can set a reasonable expiration time.
 File Contents: Cache the contents of files, especially for large files or commonly accessed repositories.
