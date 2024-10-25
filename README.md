@@ -1,4 +1,5 @@
-\# Project Name
+\# Auto-review-tool
+
 
 This project is a web application built with **FastAPI** that interacts with the GitHub and Mistral AI APIs to analyze project code and provide feedback.
 
