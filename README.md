@@ -106,13 +106,12 @@ Ensure you are in the Poetry virtual environment.
 
 #What if:
 
-1. Implement Caching Mechanisms:
+1.- Implement Caching Mechanisms:
 Cache GitHub Repository Data:
 Cache the file tree and metadata of repositories to avoid repeated API calls for the same data. Since repositories don't change frequently within short time spans, you can set a reasonable expiration time.
 File Contents: Cache the contents of files, especially for large files or commonly accessed repositories.
 Employ caching systems like Redis to store cached data in memory, which can be accessed quickly and shared across multiple instances
-
 2. Asynchronous Processing
-3 Limit the number of requests a single user can make per minute to prevent abuse. Set a global limit to control the overall load on your system.
-4 Move heavy processing tasks to background workers using task queues like Celery or RQ.
-5.Deploy multiple instances of the app with auto-scaling based on request load, managed through container orchestration (e.g., Kubernetes).
+3. Limit the number of requests a single user can make per minute to prevent abuse. Set a global limit to control the overall load on your system.
+4. Move heavy processing tasks to background workers using task queues like Celery or RQ.
+5. Deploy multiple instances of the app with auto-scaling based on request load, managed through container orchestration (e.g., Kubernetes).
